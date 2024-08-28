@@ -78,6 +78,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     oeminfo_nvm_server \
+    hw_healthd \
     teecd
 
 $(call inherit-product, frameworks/native/build/phone-xxhdpi-3072-dalvik-heap.mk)
