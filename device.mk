@@ -81,5 +81,12 @@ PRODUCT_PACKAGES += \
     hw_healthd \
     teecd
 
+# USB
+PRODUCT_PACKAGES += \
+    com.android.future.usb.accessory
+
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    persist.sys.usb.config=mtp
+
 $(call inherit-product, frameworks/native/build/phone-xxhdpi-3072-dalvik-heap.mk)
 $(call inherit-product, frameworks/native/build/phone-xxhdpi-3072-hwui-memory.mk)
