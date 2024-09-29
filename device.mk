@@ -28,6 +28,13 @@ PRODUCT_COPY_FILES += \
 DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay
 
+# Properties
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    ro.zygote=zygote64_32 \
+    ro.config.sync=yes \
+    ro.adb.secure=0 \
+    ro.secure=0
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.hi3635 \
