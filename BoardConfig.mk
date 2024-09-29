@@ -43,6 +43,7 @@ TARGET_NO_RADIOIMAGE := true
 # CPU
 ENABLE_CPUSETS := true
 TARGET_CPU_SMP := true
+ENABLE_SCHEDBOOST := true
 
 # Display
 USE_OPENGL_RENDERER := true
@@ -89,3 +90,6 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/fstab.hi3635
 
 # SELinux
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
+
+# WebGL
+ENABLE_WEBGL := true
