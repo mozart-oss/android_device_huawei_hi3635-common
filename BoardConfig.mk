@@ -93,3 +93,16 @@ BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
 # WebGL
 ENABLE_WEBGL := true
+
+# Wi-Fi
+WIFI_BAND := 802_11_ABG
+BOARD_WLAN_DEVICE := bcmdhd
+BOARD_WLAN_DEVICE_REV := bcm4339
+TARGET_USES_64_BIT_BCMDHD := true
+WPA_SUPPLICANT_VERSION := VER_0_8_X
+BOARD_WPA_SUPPLICANT_DRIVER := NL80211
+BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_bcmdhd
+WIFI_DRIVER_FW_PATH_P2P := "/vendor/firmware/fw_bcm4339_hw.bin"
+WIFI_DRIVER_FW_PATH_STA := "/vendor/firmware/fw_bcm4339_hw.bin"
+WIFI_DRIVER_FW_PATH_AP := "/vendor/firmware/fw_bcm4339_apsta_hw.bin"
+WIFI_DRIVER_FW_PATH_PARAM := "/sys/module/bcmdhd/parameters/firmware_path"
