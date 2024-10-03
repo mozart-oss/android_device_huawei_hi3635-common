@@ -38,6 +38,8 @@ ro.sys.sdcardfs=true
 # Sensors
 ro.config.hw_sensorhub=true
 
+# USB
+persist.sys.usb.config.extra=none
+
 # Wi-Fi
 wifi.interface=wlan0
-persist.sys.usb.config.extra=none
