@@ -110,6 +110,8 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 # Wi-Fi
 PRODUCT_PACKAGES += \
     libwpa_client \
+    hostapd \
+    hostapd.conf \
     wpa_supplicant \
     wpa_supplicant.conf
 
