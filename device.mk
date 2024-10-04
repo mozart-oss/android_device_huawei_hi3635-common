@@ -115,6 +115,10 @@ PRODUCT_PACKAGES += \
     hw_healthd \
     teecd
 
+# Shims
+PRODUCT_PACKAGES += \
+    libshim_hisi
+
 # Thermal
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/thermal/thermald.xml:system/etc/thermald.xml \
