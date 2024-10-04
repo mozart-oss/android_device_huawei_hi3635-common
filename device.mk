@@ -31,6 +31,10 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
     $(DEVICE_PATH)/configs/audio/audio_policy.conf:system/etc/audio_policy.conf
 
+# Ambient
+PRODUCT_PACKAGES += \
+    ambientsdk
+
 # Bluetooth
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
