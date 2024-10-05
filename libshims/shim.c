@@ -1,3 +1,9 @@
+//
+// Copyright (C) 2024 The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
 #define LOG_TAG "libshim"
 
 #include <cutils/log.h>

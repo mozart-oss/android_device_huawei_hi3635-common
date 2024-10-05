@@ -117,7 +117,8 @@ PRODUCT_PACKAGES += \
 
 # Shims
 PRODUCT_PACKAGES += \
-    libshim_hisi
+    libshim_hisi \
+    libshim_gui
 
 # Thermal
 PRODUCT_COPY_FILES += \
