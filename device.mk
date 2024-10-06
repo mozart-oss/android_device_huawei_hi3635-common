@@ -106,6 +106,7 @@ PRODUCT_PACKAGES += \
     init.hi3635.connectivity.rc \
     init.hi3635.gps.rc \
     init.hi3635.power.rc \
+    init.hi3635.power.sh \
     init.hi3635.rc \
     init.hi3635.usb.rc \
     ueventd.hi3635.rc
