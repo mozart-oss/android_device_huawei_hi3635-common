@@ -23,3 +23,7 @@ int _ZN7android14SurfaceControl7setBlurEf() {
 int _ZN7android14SurfaceControl19setBlurMaskSamplingEj() {
     return 0;
 }
+
+int _ZNK7android13SensorManager13getSensorListEPPKPKNS_6SensorE() {
+    return 0;
+}
