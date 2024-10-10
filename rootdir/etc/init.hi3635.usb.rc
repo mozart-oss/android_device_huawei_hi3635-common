@@ -9,9 +9,8 @@ on post-fs-data
     chmod 0660 /sys/class/android_usb/android0/f_rndis/ethaddr
     chown system system /sys/class/android_usb/android0/switch_request
     chmod 0664 /sys/class/android_usb/android0/switch_request
-
-
     chown system system /sys/class/usbswitch/usbsw/swstate
+
 on boot
     write /sys/class/android_usb/android0/iManufacturer ${ro.product.manufacturer}
     write /sys/class/android_usb/android0/iProduct ${ro.product.model}

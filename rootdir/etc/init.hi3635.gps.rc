@@ -1,13 +1,10 @@
 on post-fs-data
-
     mkdir /data/gps 775 root system
     mkdir /data/gps/log 770
-
     mkdir /data/hwzd_logs 775 root system
     mkdir /data/hwzd_logs/gps_log 775
 
 on boot
-
     chmod 660 /dev/ttyAMA3
 
 service gpsdaemon /system/bin/gpsdaemon

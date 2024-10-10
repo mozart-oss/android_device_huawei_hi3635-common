@@ -858,19 +858,19 @@ on boot
     write /sys/block/zram0/disksize 268435456
     swapon_all fstab.hi3635
 	
-     write /proc/sys/net/core/rps_sock_flow_entries 0
-     write /sys/class/net/rmnet0/queues/rx-0/rps_flow_cnt 0
-     write /sys/class/net/rmnet0/queues/rx-0/rps_cpus f
-     write /sys/class/net/rmnet1/queues/rx-0/rps_flow_cnt 0
-     write /sys/class/net/rmnet1/queues/rx-0/rps_cpus f
-     write /sys/class/net/rmnet2/queues/rx-0/rps_flow_cnt 0
-     write /sys/class/net/rmnet2/queues/rx-0/rps_cpus f
-     write /sys/class/net/rmnet3/queues/rx-0/rps_flow_cnt 0
-     write /sys/class/net/rmnet3/queues/rx-0/rps_cpus f
-     write /sys/class/net/rmnet4/queues/rx-0/rps_flow_cnt 0
-     write /sys/class/net/rmnet4/queues/rx-0/rps_cpus f
-     write /sys/class/net/rmnet_ims/queues/rx-0/rps_flow_cnt 0
-     write /sys/class/net/rmnet_ims/queues/rx-0/rps_cpus f
+    write /proc/sys/net/core/rps_sock_flow_entries 0
+    write /sys/class/net/rmnet0/queues/rx-0/rps_flow_cnt 0
+    write /sys/class/net/rmnet0/queues/rx-0/rps_cpus f
+    write /sys/class/net/rmnet1/queues/rx-0/rps_flow_cnt 0
+    write /sys/class/net/rmnet1/queues/rx-0/rps_cpus f
+    write /sys/class/net/rmnet2/queues/rx-0/rps_flow_cnt 0
+    write /sys/class/net/rmnet2/queues/rx-0/rps_cpus f
+    write /sys/class/net/rmnet3/queues/rx-0/rps_flow_cnt 0
+    write /sys/class/net/rmnet3/queues/rx-0/rps_cpus f
+    write /sys/class/net/rmnet4/queues/rx-0/rps_flow_cnt 0
+    write /sys/class/net/rmnet4/queues/rx-0/rps_cpus f
+    write /sys/class/net/rmnet_ims/queues/rx-0/rps_flow_cnt 0
+    write /sys/class/net/rmnet_ims/queues/rx-0/rps_cpus f
 
     chmod 0660 /sys/class/hw_power/charger/charge_data/enable_charger
     chown system system /sys/class/hw_power/charger/charge_data/enable_charger
