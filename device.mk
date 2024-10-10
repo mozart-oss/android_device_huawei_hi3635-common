@@ -95,9 +95,7 @@ PRODUCT_COPY_FILES += \
 # Properties
 ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.zygote=zygote64_32 \
-    ro.config.sync=yes \
-    ro.adb.secure=0 \
-    ro.secure=0
+    ro.config.sync=yes
 
 # Ramdisk
 PRODUCT_PACKAGES += \
