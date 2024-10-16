@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/huawei/mozart
+COMMON_PATH := device/huawei/hi3635-common
 
 # Architecture
 TARGET_ARCH := arm64
@@ -23,7 +23,7 @@ ARCH_ARM_HAVE_NEON := true
 ARCH_ARM_HIGH_OPTIMIZATION := true
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := hi3635,mozart
+TARGET_OTA_ASSERT_DEVICE := hi3635,mozart,liszt
 
 # Audio
 BOARD_USES_ALSA_AUDIO := true
@@ -34,7 +34,7 @@ TARGET_USES_64_BIT_BINDER := true
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(COMMON_PATH)/bluetooth
 
 # Bootanimation
 TARGET_BOOTANIMATION_PRELOAD := true
@@ -61,7 +61,7 @@ USE_DEVICE_SPECIFIC_GPS := true
 # Init
 TARGET_UNIFIED_DEVICE := true
 TARGET_INIT_VENDOR_LIB := libinit_hisi
-TARGET_LIBINIT_DEFINES_FILE := $(DEVICE_PATH)/libinit/init_mozart.cpp
+TARGET_LIBINIT_DEFINES_FILE := $(COMMON_PATH)/libinit/init_mozart.cpp
 
 # Kernel
 BOARD_KERNEL_BASE := 0x00678000
@@ -79,7 +79,7 @@ TARGET_KERNEL_CONFIG := hisi_3635_defconfig
 TARGET_PROVIDES_LIBLIGHT := true
 
 # Live Display
-BOARD_HARDWARE_CLASS := $(DEVICE_PATH)/livedisplay
+BOARD_HARDWARE_CLASS := $(COMMON_PATH)/livedisplay
 
 # Partitions
 BOARD_HAS_LARGE_FILESYSTEM := true
@@ -97,13 +97,13 @@ TARGET_BOARD_PLATFORM := hi3635
 BOARD_VENDOR_PLATFORM := hi3635
 
 # Properties
-TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
+TARGET_SYSTEM_PROP := $(COMMON_PATH)/system.prop
 
 # Recovery
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/fstab.hi3635
+TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/fstab.hi3635
 
 # SELinux
-BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
+BOARD_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy
 
 # WebGL
 ENABLE_WEBGL := true

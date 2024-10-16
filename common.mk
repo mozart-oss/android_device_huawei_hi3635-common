@@ -4,10 +4,10 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/huawei/mozart
+COMMON_PATH := device/huawei/hi3635-common
 
-# Inherit vendor blobs
-$(call inherit-product, vendor/huawei/mozart/mozart-vendor.mk)
+# Inherit common vendor blobs
+$(call inherit-product, vendor/huawei/hi3635-common/hi3635-common-vendor.mk)
 
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
@@ -28,8 +28,8 @@ PRODUCT_PACKAGES += \
     tinypcminfo
 
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
-    $(DEVICE_PATH)/configs/audio/audio_policy.conf:system/etc/audio_policy.conf
+    $(COMMON_PATH)/configs/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
+    $(COMMON_PATH)/configs/audio/audio_policy.conf:system/etc/audio_policy.conf
 
 # Ambient
 PRODUCT_PACKAGES += \
@@ -37,20 +37,20 @@ PRODUCT_PACKAGES += \
 
 # Bluetooth
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
+    $(COMMON_PATH)/configs/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
 
 # GPS
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/gps/clatd.conf:system/etc/clatd.conf \
-    $(DEVICE_PATH)/configs/gps/gps.conf:system/etc/gps.conf \
-    $(DEVICE_PATH)/configs/gps/gps47531config.xml:system/etc/gps47531config.xml \
-    $(DEVICE_PATH)/configs/gps/gps47531config_beta.xml:system/etc/gps47531config_beta.xml
+    $(COMMON_PATH)/configs/gps/clatd.conf:system/etc/clatd.conf \
+    $(COMMON_PATH)/configs/gps/gps.conf:system/etc/gps.conf \
+    $(COMMON_PATH)/configs/gps/gps47531config.xml:system/etc/gps47531config.xml \
+    $(COMMON_PATH)/configs/gps/gps47531config_beta.xml:system/etc/gps47531config_beta.xml
 
 # Media
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/media/media_codecs.xml:system/etc/media_codecs.xml \
-    $(DEVICE_PATH)/configs/media/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
-    $(DEVICE_PATH)/configs/media/media_profiles.xml:system/etc/media_profiles.xml
+    $(COMMON_PATH)/configs/media/media_codecs.xml:system/etc/media_codecs.xml \
+    $(COMMON_PATH)/configs/media/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
+    $(COMMON_PATH)/configs/media/media_profiles.xml:system/etc/media_profiles.xml
 
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
@@ -59,11 +59,11 @@ PRODUCT_COPY_FILES += \
 
 # OMX
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/omx/topazhp.cfg:system/etc/topazhp.cfg
+    $(COMMON_PATH)/configs/omx/topazhp.cfg:system/etc/topazhp.cfg
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
-    $(DEVICE_PATH)/overlay
+    $(COMMON_PATH)/overlay
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -121,8 +121,8 @@ PRODUCT_PACKAGES += \
 
 # Thermal
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/thermal/thermald.xml:system/etc/thermald.xml \
-    $(DEVICE_PATH)/configs/thermal/thermald_performance.xml:system/etc/thermald_performance.xml
+    $(COMMON_PATH)/configs/thermal/thermald.xml:system/etc/thermald.xml \
+    $(COMMON_PATH)/configs/thermal/thermald_performance.xml:system/etc/thermald_performance.xml
 
 # USB
 PRODUCT_PACKAGES += \
@@ -140,8 +140,8 @@ PRODUCT_PACKAGES += \
     wpa_supplicant.conf
 
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
-    $(DEVICE_PATH)/configs/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf
+    $(COMMON_PATH)/configs/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
+    $(COMMON_PATH)/configs/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf
 
 $(call inherit-product, frameworks/native/build/phone-xxhdpi-3072-dalvik-heap.mk)
 $(call inherit-product, frameworks/native/build/phone-xxhdpi-3072-hwui-memory.mk)
